@@ -1,0 +1,504 @@
+
+*** Running vivado
+    with args -log design_1_bram_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_bram_0_0.tcl
+
+
+****** Vivado v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source design_1_bram_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/GELEE/Zedboard/project_for_zhuanti/VGA_IP'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/GELEE/Zedboard/project_for_zhuanti/bram_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/GELEE/Zedboard/project_for_zhuanti/image_processing_IP'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/GELEE/Zedboard/project_for_zhuanti/memory_for_processing_IP'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xillinx/Vivado/2018.3/data/ip'.
+Command: synth_design -top design_1_bram_0_0 -part xc7z020clg484-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 16804 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 394.535 ; gain = 98.895
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_bram_0_0' [d:/GELEE/Zedboard/project_for_zhuanti/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_bram_0_0/synth/design_1_bram_0_0.v:56]
+INFO: [Synth 8-6157] synthesizing module 'bram_v1_0' [d:/GELEE/Zedboard/project_for_zhuanti/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/5744/hdl/bram_v1_0.v:4]
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'bram_v1_0_S00_AXI' [d:/GELEE/Zedboard/project_for_zhuanti/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/5744/hdl/bram_v1_0_S00_AXI.v:4]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter ADDR_LSB bound to: 2 - type: integer 
+	Parameter OPT_MEM_ADDR_BITS bound to: 1 - type: integer 
+INFO: [Synth 8-226] default block is never used [d:/GELEE/Zedboard/project_for_zhuanti/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/5744/hdl/bram_v1_0_S00_AXI.v:232]
+INFO: [Synth 8-226] default block is never used [d:/GELEE/Zedboard/project_for_zhuanti/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/5744/hdl/bram_v1_0_S00_AXI.v:373]
+INFO: [Synth 8-6157] synthesizing module 'memory_ctrl' [d:/GELEE/Zedboard/project_for_zhuanti/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/5744/src/memory_ctrl.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mem' [d:/GELEE/Zedboard/project_for_zhuanti/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/5744/src/mem256X8.v:1]
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+	Parameter ADDR_WIDTH bound to: 19 - type: integer 
+WARNING: [Synth 8-3848] Net output_ready in module/entity mem does not have driver. [d:/GELEE/Zedboard/project_for_zhuanti/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/5744/src/mem256X8.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'mem' (1#1) [d:/GELEE/Zedboard/project_for_zhuanti/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/5744/src/mem256X8.v:1]
+WARNING: [Synth 8-3848] Net outpud_ready in module/entity memory_ctrl does not have driver. [d:/GELEE/Zedboard/project_for_zhuanti/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/5744/src/memory_ctrl.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'memory_ctrl' (2#1) [d:/GELEE/Zedboard/project_for_zhuanti/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/5744/src/memory_ctrl.v:1]
+WARNING: [Synth 8-350] instance 'm_ctrl1' of module 'memory_ctrl' requires 11 connections, but only 10 given [d:/GELEE/Zedboard/project_for_zhuanti/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/5744/hdl/bram_v1_0_S00_AXI.v:404]
+INFO: [Synth 8-6155] done synthesizing module 'bram_v1_0_S00_AXI' (3#1) [d:/GELEE/Zedboard/project_for_zhuanti/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/5744/hdl/bram_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'bram_v1_0' (4#1) [d:/GELEE/Zedboard/project_for_zhuanti/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/5744/hdl/bram_v1_0.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_bram_0_0' (5#1) [d:/GELEE/Zedboard/project_for_zhuanti/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_bram_0_0/synth/design_1_bram_0_0.v:56]
+WARNING: [Synth 8-3331] design mem has unconnected port output_ready
+WARNING: [Synth 8-3331] design mem has unconnected port w_addr[18]
+WARNING: [Synth 8-3331] design mem has unconnected port w_addr[17]
+WARNING: [Synth 8-3331] design mem has unconnected port r_addr[18]
+WARNING: [Synth 8-3331] design mem has unconnected port r_addr[17]
+WARNING: [Synth 8-3331] design memory_ctrl has unconnected port outpud_ready
+WARNING: [Synth 8-3331] design memory_ctrl has unconnected port reset
+WARNING: [Synth 8-3331] design memory_ctrl has unconnected port cmd[7]
+WARNING: [Synth 8-3331] design memory_ctrl has unconnected port cmd[6]
+WARNING: [Synth 8-3331] design memory_ctrl has unconnected port cmd[5]
+WARNING: [Synth 8-3331] design memory_ctrl has unconnected port cmd[4]
+WARNING: [Synth 8-3331] design memory_ctrl has unconnected port cmd[3]
+WARNING: [Synth 8-3331] design memory_ctrl has unconnected port cmd[2]
+WARNING: [Synth 8-3331] design bram_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design bram_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design bram_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design bram_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design bram_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design bram_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 482.152 ; gain = 186.512
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 482.152 ; gain = 186.512
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 482.152 ; gain = 186.512
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 784.414 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 784.414 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 787.141 ; gain = 2.727
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 787.141 ; gain = 491.500
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 787.141 ; gain = 491.500
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 787.141 ; gain = 491.500
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "write_enable" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 787.141 ; gain = 491.500
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 4     
+	               12 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 7     
++---RAMs : 
+	            1406K Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
+	   4 Input     32 Bit        Muxes := 4     
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 6     
+	   4 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module mem 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 1     
++---RAMs : 
+	            1406K Bit         RAMs := 1     
+Module memory_ctrl 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module bram_v1_0_S00_AXI 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 4     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
+	   4 Input     32 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 5     
+	   4 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-3917] design design_1_bram_0_0 has port s00_axi_rdata[31] driven by constant 0
+INFO: [Synth 8-3917] design design_1_bram_0_0 has port s00_axi_rdata[30] driven by constant 0
+INFO: [Synth 8-3917] design design_1_bram_0_0 has port s00_axi_rdata[29] driven by constant 0
+INFO: [Synth 8-3917] design design_1_bram_0_0 has port s00_axi_rdata[28] driven by constant 0
+INFO: [Synth 8-3917] design design_1_bram_0_0 has port s00_axi_rdata[27] driven by constant 0
+INFO: [Synth 8-3917] design design_1_bram_0_0 has port s00_axi_rdata[26] driven by constant 0
+INFO: [Synth 8-3917] design design_1_bram_0_0 has port s00_axi_rdata[25] driven by constant 0
+INFO: [Synth 8-3917] design design_1_bram_0_0 has port s00_axi_rdata[24] driven by constant 0
+INFO: [Synth 8-3917] design design_1_bram_0_0 has port s00_axi_rdata[23] driven by constant 0
+INFO: [Synth 8-3917] design design_1_bram_0_0 has port s00_axi_rdata[22] driven by constant 0
+INFO: [Synth 8-3917] design design_1_bram_0_0 has port s00_axi_rdata[21] driven by constant 0
+INFO: [Synth 8-3917] design design_1_bram_0_0 has port s00_axi_rdata[20] driven by constant 0
+INFO: [Synth 8-3917] design design_1_bram_0_0 has port s00_axi_rdata[19] driven by constant 0
+INFO: [Synth 8-3917] design design_1_bram_0_0 has port s00_axi_rdata[18] driven by constant 0
+INFO: [Synth 8-3917] design design_1_bram_0_0 has port s00_axi_rdata[17] driven by constant 0
+INFO: [Synth 8-3917] design design_1_bram_0_0 has port s00_axi_rdata[16] driven by constant 0
+INFO: [Synth 8-3917] design design_1_bram_0_0 has port s00_axi_rdata[15] driven by constant 0
+INFO: [Synth 8-3917] design design_1_bram_0_0 has port s00_axi_rdata[14] driven by constant 0
+INFO: [Synth 8-3917] design design_1_bram_0_0 has port s00_axi_rdata[13] driven by constant 0
+INFO: [Synth 8-3917] design design_1_bram_0_0 has port s00_axi_rdata[12] driven by constant 0
+INFO: [Synth 8-3917] design design_1_bram_0_0 has port s00_axi_rdata[11] driven by constant 0
+INFO: [Synth 8-3917] design design_1_bram_0_0 has port s00_axi_rdata[10] driven by constant 0
+INFO: [Synth 8-3917] design design_1_bram_0_0 has port s00_axi_rdata[9] driven by constant 0
+INFO: [Synth 8-3917] design design_1_bram_0_0 has port s00_axi_rdata[8] driven by constant 0
+INFO: [Synth 8-3917] design design_1_bram_0_0 has port s00_axi_rdata[7] driven by constant 0
+INFO: [Synth 8-3917] design design_1_bram_0_0 has port s00_axi_rdata[6] driven by constant 0
+INFO: [Synth 8-3917] design design_1_bram_0_0 has port s00_axi_rdata[5] driven by constant 0
+INFO: [Synth 8-3917] design design_1_bram_0_0 has port s00_axi_rdata[4] driven by constant 0
+INFO: [Synth 8-3917] design design_1_bram_0_0 has port s00_axi_rdata[3] driven by constant 0
+INFO: [Synth 8-3917] design design_1_bram_0_0 has port s00_axi_rdata[2] driven by constant 0
+INFO: [Synth 8-3917] design design_1_bram_0_0 has port s00_axi_rdata[1] driven by constant 0
+WARNING: [Synth 8-3331] design design_1_bram_0_0 has unconnected port r_addr[18]
+WARNING: [Synth 8-3331] design design_1_bram_0_0 has unconnected port r_addr[17]
+WARNING: [Synth 8-3331] design design_1_bram_0_0 has unconnected port s00_axi_awprot[2]
+WARNING: [Synth 8-3331] design design_1_bram_0_0 has unconnected port s00_axi_awprot[1]
+WARNING: [Synth 8-3331] design design_1_bram_0_0 has unconnected port s00_axi_awprot[0]
+WARNING: [Synth 8-3331] design design_1_bram_0_0 has unconnected port s00_axi_arprot[2]
+WARNING: [Synth 8-3331] design design_1_bram_0_0 has unconnected port s00_axi_arprot[1]
+WARNING: [Synth 8-3331] design design_1_bram_0_0 has unconnected port s00_axi_arprot[0]
+INFO: [Synth 8-3886] merging instance 'inst/bram_v1_0_S00_AXI_inst/axi_rresp_reg[0]' (FDRE) to 'inst/bram_v1_0_S00_AXI_inst/axi_rresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/bram_v1_0_S00_AXI_inst/axi_rresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'inst/bram_v1_0_S00_AXI_inst/axi_bresp_reg[0]' (FDRE) to 'inst/bram_v1_0_S00_AXI_inst/axi_bresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/bram_v1_0_S00_AXI_inst/axi_bresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'bram_v1_0_S00_AXI_insti_0/inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_mux_sel' (FD) to 'bram_v1_0_S00_AXI_insti_0/inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_mux_sel__10'
+INFO: [Synth 8-3886] merging instance 'bram_v1_0_S00_AXI_insti_0/inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_mux_sel__0' (FD) to 'bram_v1_0_S00_AXI_insti_0/inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_mux_sel__10'
+INFO: [Synth 8-3886] merging instance 'bram_v1_0_S00_AXI_insti_0/inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_mux_sel__1' (FD) to 'bram_v1_0_S00_AXI_insti_0/inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_mux_sel__10'
+INFO: [Synth 8-3886] merging instance 'bram_v1_0_S00_AXI_insti_0/inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_mux_sel__2' (FD) to 'bram_v1_0_S00_AXI_insti_0/inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_mux_sel__10'
+INFO: [Synth 8-3886] merging instance 'bram_v1_0_S00_AXI_insti_0/inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_mux_sel__3' (FD) to 'bram_v1_0_S00_AXI_insti_0/inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_mux_sel__10'
+INFO: [Synth 8-3886] merging instance 'bram_v1_0_S00_AXI_insti_0/inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_mux_sel__4' (FD) to 'bram_v1_0_S00_AXI_insti_0/inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_mux_sel__10'
+INFO: [Synth 8-3886] merging instance 'bram_v1_0_S00_AXI_insti_0/inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_mux_sel__5' (FD) to 'bram_v1_0_S00_AXI_insti_0/inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_mux_sel__10'
+INFO: [Synth 8-3886] merging instance 'bram_v1_0_S00_AXI_insti_0/inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_mux_sel__6' (FD) to 'bram_v1_0_S00_AXI_insti_0/inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_mux_sel__10'
+INFO: [Synth 8-3886] merging instance 'bram_v1_0_S00_AXI_insti_0/inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_mux_sel__7' (FD) to 'bram_v1_0_S00_AXI_insti_0/inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_mux_sel__10'
+INFO: [Synth 8-3886] merging instance 'bram_v1_0_S00_AXI_insti_0/inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_mux_sel__8' (FD) to 'bram_v1_0_S00_AXI_insti_0/inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_mux_sel__10'
+INFO: [Synth 8-3886] merging instance 'bram_v1_0_S00_AXI_insti_0/inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_mux_sel__9' (FD) to 'bram_v1_0_S00_AXI_insti_0/inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_mux_sel__10'
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 787.141 ; gain = 491.500
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping  Report (see note below)
++------------+------------+------------------------+---+---+-------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width)  | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+------------+------------------------+---+---+-------------------------+---+---+------------------+--------+--------+
+|mem:        | mem_reg    | 128 K x 12(NO_CHANGE)  | W |   | 128 K x 12(WRITE_FIRST) |   | R | Port A and B     | 0      | 48     | 
++------------+------------+------------------------+---+---+-------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance bram_v1_0_S00_AXI_insti_0/inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance bram_v1_0_S00_AXI_insti_0/inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance bram_v1_0_S00_AXI_insti_0/inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_1_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance bram_v1_0_S00_AXI_insti_0/inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_1_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance bram_v1_0_S00_AXI_insti_0/inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_1_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance bram_v1_0_S00_AXI_insti_0/inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_1_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance bram_v1_0_S00_AXI_insti_0/inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_1_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance bram_v1_0_S00_AXI_insti_0/inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_1_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance bram_v1_0_S00_AXI_insti_0/inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_1_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance bram_v1_0_S00_AXI_insti_0/inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_1_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance bram_v1_0_S00_AXI_insti_0/inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_1_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance bram_v1_0_S00_AXI_insti_0/inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_1_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance bram_v1_0_S00_AXI_insti_0/inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_3_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance bram_v1_0_S00_AXI_insti_0/inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_3_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance bram_v1_0_S00_AXI_insti_0/inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_3_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance bram_v1_0_S00_AXI_insti_0/inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_3_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance bram_v1_0_S00_AXI_insti_0/inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_3_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance bram_v1_0_S00_AXI_insti_0/inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_3_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance bram_v1_0_S00_AXI_insti_0/inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_3_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance bram_v1_0_S00_AXI_insti_0/inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_3_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance bram_v1_0_S00_AXI_insti_0/inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_3_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance bram_v1_0_S00_AXI_insti_0/inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_3_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance bram_v1_0_S00_AXI_insti_0/inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_3_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance bram_v1_0_S00_AXI_insti_0/inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_3_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 804.777 ; gain = 509.137
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 805.000 ; gain = 509.359
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping  Report
++------------+------------+------------------------+---+---+-------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width)  | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+------------+------------------------+---+---+-------------------------+---+---+------------------+--------+--------+
+|mem:        | mem_reg    | 128 K x 12(NO_CHANGE)  | W |   | 128 K x 12(WRITE_FIRST) |   | R | Port A and B     | 0      | 48     | 
++------------+------------+------------------------+---+---+-------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_1_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_1_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_1_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_1_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_1_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_1_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_1_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_1_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_1_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_1_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_3_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_3_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_3_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_3_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_3_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_3_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_3_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_3_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_3_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_3_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_3_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/bram_v1_0_S00_AXI_inst/m_ctrl1/mem_i/mem_reg_3_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 817.578 ; gain = 521.938
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6064] Net n_0_15 is driving 32 big block pins (URAM, BRAM and DSP loads). Created 4 replicas of its driver. 
+INFO: [Synth 8-6064] Net n_0_14 is driving 64 big block pins (URAM, BRAM and DSP loads). Created 7 replicas of its driver. 
+INFO: [Synth 8-6064] Net n_0_55 is driving 64 big block pins (URAM, BRAM and DSP loads). Created 7 replicas of its driver. 
+INFO: [Synth 8-6064] Net n_0_57 is driving 32 big block pins (URAM, BRAM and DSP loads). Created 4 replicas of its driver. 
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 817.578 ; gain = 521.938
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 817.578 ; gain = 521.938
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 817.578 ; gain = 521.938
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 817.578 ; gain = 521.938
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 817.578 ; gain = 521.938
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 817.578 ; gain = 521.938
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |LUT1       |     4|
+|2     |LUT2       |     2|
+|3     |LUT3       |    47|
+|4     |LUT4       |    12|
+|5     |LUT6       |     9|
+|6     |RAMB36E1   |    24|
+|7     |RAMB36E1_1 |    24|
+|8     |FDCE       |     4|
+|9     |FDRE       |    59|
+|10    |FDSE       |     1|
++------+-----------+------+
+
+Report Instance Areas: 
++------+---------------------------+------------------+------+
+|      |Instance                   |Module            |Cells |
++------+---------------------------+------------------+------+
+|1     |top                        |                  |   186|
+|2     |  inst                     |bram_v1_0         |   186|
+|3     |    bram_v1_0_S00_AXI_inst |bram_v1_0_S00_AXI |   186|
+|4     |      m_ctrl1              |memory_ctrl       |   107|
+|5     |        mem_i              |mem               |    85|
++------+---------------------------+------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 817.578 ; gain = 521.938
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 8 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 817.578 ; gain = 216.949
+Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 817.578 ; gain = 521.938
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 48 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 827.477 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+128 Infos, 31 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 827.477 ; gain = 540.719
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 827.477 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/GELEE/Zedboard/project_for_zhuanti/project_1/project_1.runs/design_1_bram_0_0_synth_1/design_1_bram_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_bram_0_0, cache-ID = daf776eef9fe33a8
+INFO: [Coretcl 2-1174] Renamed 4 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 827.477 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/GELEE/Zedboard/project_for_zhuanti/project_1/project_1.runs/design_1_bram_0_0_synth_1/design_1_bram_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_bram_0_0_utilization_synth.rpt -pb design_1_bram_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 20 21:52:12 2021...

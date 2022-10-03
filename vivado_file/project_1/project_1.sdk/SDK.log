@@ -1,0 +1,53 @@
+15:03:46 INFO  : Registering command handlers for SDK TCF services
+15:03:46 INFO  : Launching XSCT server: xsct.bat -interactive D:\GELEE\Zedboard\project_for_zhuanti\vivado_file\project_1\project_1.sdk\temp_xsdb_launch_script.tcl
+15:03:47 INFO  : XSCT server has started successfully.
+15:03:47 INFO  : Successfully done setting XSCT server connection channel  
+15:03:47 INFO  : Successfully done setting SDK workspace  
+15:03:47 INFO  : Processing command line option -hwspec D:/GELEE/Zedboard/project_for_zhuanti/vivado_file/project_1/project_1.sdk/design_1_wrapper.hdf.
+15:07:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:07:30 INFO  : Jtag cable 'Digilent Zed 210248774190' is selected.
+15:07:30 INFO  : 'jtag frequency' command is executed.
+15:07:30 INFO  : Sourcing of 'D:/GELEE/Zedboard/project_for_zhuanti/vivado_file/project_1/project_1.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:07:30 INFO  : Context for 'APU' is selected.
+15:07:30 INFO  : System reset is completed.
+15:07:33 INFO  : 'after 3000' command is executed.
+15:07:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248774190" && level==0} -index 1' command is executed.
+15:07:36 INFO  : FPGA configured successfully with bitstream "D:/GELEE/Zedboard/project_for_zhuanti/vivado_file/project_1/project_1.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+15:07:36 INFO  : Context for 'APU' is selected.
+15:07:36 INFO  : Hardware design information is loaded from 'D:/GELEE/Zedboard/project_for_zhuanti/vivado_file/project_1/project_1.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+15:07:36 INFO  : 'configparams force-mem-access 1' command is executed.
+15:07:36 INFO  : Context for 'APU' is selected.
+15:07:36 INFO  : 'ps7_init' command is executed.
+15:07:36 INFO  : 'ps7_post_config' command is executed.
+15:07:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:07:37 INFO  : The application 'D:/GELEE/Zedboard/project_for_zhuanti/vivado_file/project_1/project_1.sdk/TEST/Debug/TEST.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:07:37 INFO  : 'configparams force-mem-access 0' command is executed.
+15:07:37 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/GELEE/Zedboard/project_for_zhuanti/vivado_file/project_1/project_1.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248774190"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248774190" && level==0} -index 1
+fpga -file D:/GELEE/Zedboard/project_for_zhuanti/vivado_file/project_1/project_1.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248774190"} -index 0
+loadhw -hw D:/GELEE/Zedboard/project_for_zhuanti/vivado_file/project_1/project_1.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248774190"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248774190"} -index 0
+dow D:/GELEE/Zedboard/project_for_zhuanti/vivado_file/project_1/project_1.sdk/TEST/Debug/TEST.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:07:37 INFO  : Memory regions updated for context APU
+15:07:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:07:37 INFO  : 'con' command is executed.
+15:07:37 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248774190"} -index 0
+con
+----------------End of Script----------------
+
+15:07:37 INFO  : Launch script is exported to file 'D:\GELEE\Zedboard\project_for_zhuanti\vivado_file\project_1\project_1.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+15:29:13 INFO  : Disconnected from the channel tcfchan#1.
